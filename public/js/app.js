@@ -1,6 +1,3 @@
-console.log('Client side javascript file is loaded!')
-
-
 const weatherForm = document.querySelector('form')//converts html form tag to javascript.
 const search = document.querySelector('input')
 const messegeOne = document.querySelector('#messege-1')
