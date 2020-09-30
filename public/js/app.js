@@ -10,7 +10,7 @@ weatherForm.addEventListener('submit', (e) =>{
     messegeOne.textContent = 'Loading weather info...'
     messegeTwo.textContent = ''
 
-    fetch('http://localhost:3000/weather?address='+search.value).then((response)=>{
+    fetch('/weather?address='+search.value).then((response)=>{
     response.json().then((data)=>{//data is the name of object present on that pg (/weather).
         if (data.error){
             messegeOne.textContent = data.error

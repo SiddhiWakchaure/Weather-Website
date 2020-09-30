@@ -5,6 +5,7 @@ const express = require("express")
 const hbs = require("hbs")
 
 const app = express()
+const port = process.env.PORT || 3000
 
 //DEFINE PATHS TO EXPRESS CONFIG, to set up handlebars engine and views location.
 //to set templating engine,hbs for dynamic type of site.
@@ -106,6 +107,6 @@ app.get('*', (req,res)=>{
 //this takes port no. as an argument where all of your work is going to be diaplyed. It stats the server and listens
 //on a particular port. port 3000 is a common developer port. which is not a default port. And further callback function shows to us
 //on terminal.this server is always up and running unless we stop it by control C on terminal.
-app.listen(3000,()=>{
-    console.log("Your server is up on port 3000!")
+app.listen(port,()=>{
+    console.log("Your server is up on port" + port)
 })
